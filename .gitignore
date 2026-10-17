@@ -1,0 +1,14 @@
+# Dependencies and build artifacts
+node_modules/
+.next/
+dist/
+*.tsbuildinfo
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Local logs
+*.log
+npm-debug.log*

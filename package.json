@@ -1,27 +1,20 @@
 {
+  "name": "selfbot-pro-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "worker",
+    "frontend"
+  ],
   "scripts": {
-    "start": "next dev",
-    "dev": "next dev",
-    "build": "next build",
-    "serve": "next start",
-    "typecheck": "tsc --noEmit"
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "start": "npm run start --workspace=@selfbot-pro/frontend",
+    "install:all": "npm install --workspaces"
   },
-  "dependencies": {
-    "@prisma/client": "5.11.0",
-    "discord.js-selfbot-v13": "^2.11.0",
-    "https-proxy-agent": "7.0.2",
-    "ioredis": "5.4.1",
-    "lucide-react": "0.341.0",
-    "next": "14.2.0",
-    "prisma": "5.11.0",
-    "react": "18.3.1",
-    "socket.io": "4.7.5",
-    "socket.io-client": "4.7.5",
-    "tailwindcss": "3.4.0",
-    "typescript": "5.3.3",
-    "zod": "3.22.4"
-  },
-  "devDependencies": {
-    "@types/react": "19.3.0"
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   }
 }
